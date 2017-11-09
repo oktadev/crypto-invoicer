@@ -26,3 +26,8 @@ h2 {
 .create-invoice {
   margin-top: 1em;
 }
+
+.error {
+  color: red;
+  font-weight: bold;
+}

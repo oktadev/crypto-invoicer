@@ -13,12 +13,12 @@ block body
     .col-6
       .jumbotron
         if error
-          p #{error}
+          p.error #{error}
 
         form.form(method="post")
           .form-group
-            label(for="email") Client Email
-            input#email.form-control(type="email", placeholder="Client Email", name="email", required=true)
+            label(for="email") To
+            input#email.form-control(type="email", placeholder="Client Email", name="email")
           .form-group
             label(for="description") Description
             input#description.form-control(type="text", placeholder="Description", name="description", required=true)
