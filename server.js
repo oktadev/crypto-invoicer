@@ -39,6 +39,10 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
+app.get("/dashboard", oidc.ensureAuthenticated(), (req, res) => {
+  res.render("dashboard", { user: req.userinfo });
+});
+
 app.get("/logout", (req, res) => {
   req.logout();
   res.redirect("/");
