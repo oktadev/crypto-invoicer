@@ -1,0 +1,9 @@
+ul.nav.nav-pills.justify-content-end
+  li.nav-item
+    a.nav-link.active(href="/") Home
+    if user
+      li.nav-item
+        a.nav-link.active(href="/logout") Logout
+    else
+      li.nav-item
+        a.nav-link.active(href="#") Link
