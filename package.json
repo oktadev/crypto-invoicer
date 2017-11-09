@@ -1,0 +1,20 @@
+{
+  "name": "invoicer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@okta/oidc-middleware": "0.0.6",
+    "coinbase": "^2.0.6",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "pug": "^2.0.0-rc.4",
+    "uuid": "^3.1.0"
+  }
+}
