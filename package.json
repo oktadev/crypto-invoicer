@@ -1,14 +1,14 @@
 {
-  "name": "invoicer",
+  "name": "crypto-invoicer",
   "version": "1.0.0",
-  "description": "",
+  "description": "A personal web portal for invoicing clients with Bitcoin.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Randall Degges",
+  "license": "Unlicense",
   "dependencies": {
     "@okta/oidc-middleware": "0.0.6",
     "async": "^2.6.0",
