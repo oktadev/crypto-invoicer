@@ -1,7 +1,28 @@
-h1 {
+.head {
   margin-top: 2em;
 }
 
 .jumbotron {
   margin-top: 2em;
+}
+
+.table {
+  margin-top: 4em;
+}
+
+.intro {
+  margin-top: 4em;
+}
+
+h2 {
+  margin-bottom: 1em;
+}
+
+.nav {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.create-invoice {
+  margin-top: 1em;
 }
