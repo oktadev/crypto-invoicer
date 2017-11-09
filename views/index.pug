@@ -1,13 +1,23 @@
 extends base.pug
 
 block body
-  h1.text-center Crypto Invoicer
+  h1.text-center.head Crypto Invoicer
 
-  .jumbotron
-    p.
-      This is a personal invoicing portal. Use this portal to bill your clients
-      for work done using #[a(href="https://www.coinbase.com/") Coinbase]:
-      accept money in USD or Bitcoin.
+  .row.intro
+    .col
+    .col-8
+      .jumbotron
+        h2.text-center A Personal Invoicing Portal
 
-    p
-      Please #[a(href="/login") login] to continue.
+        p.
+          This is a personal invoicing portal. Use this portal to bill your clients
+          for work done using #[a(href="https://www.coinbase.com/") Coinbase]:
+          accept money in USD or Bitcoin.
+
+        p.
+          If you're performing work for clients and need a simple way to bill
+              them, give Crypto Invoicer a try!
+
+        p.
+          Please #[a.btn.btn-primary(href="/login") login] to continue.
+    .col
