@@ -1,0 +1,51 @@
+extends base.pug
+
+block body
+  script(src="/static/js/sorttable.js")
+
+  include navbar.pug
+
+  h1.text-center Dashboard
+
+  h2.create-invoice Create Invoice
+  .row
+    .col
+    .col-6
+      .jumbotron
+        if error
+          p #{error}
+
+        form.form(method="post")
+          .form-group
+            label(for="email") Client Email
+            input#email.form-control(type="email", placeholder="Client Email", name="email", required=true)
+          .form-group
+            label(for="description") Description
+            input#description.form-control(type="text", placeholder="Description", name="description", required=true)
+          .form-group
+            label(for="amount") Amount (USD)
+            input#amount.form-control(type="number", min="1", step="any", name="amount", required=true)
+          button.btn.btn-primary(type="submit") Create Invoice
+
+    .col
+
+  if transactions
+    h2 Invoices
+    table.table.sortable
+      thead.thead-dark
+        tr
+          td Invoice #
+          td Date Created
+          td Completed?
+          td Client Email
+          td Description
+          td Amount (USD)
+      tbody
+        each transaction in transactions
+          tr
+            td #{transaction.id}
+            td #{new Date(transaction.created_at).toLocaleDateString("en-US", { hour12: false, year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", second: "2-digit" })}
+            td #{transaction.status}
+            td #{transaction.to.email}
+            td #{transaction.description}
+            td $#{transaction.native_amount.amount}
