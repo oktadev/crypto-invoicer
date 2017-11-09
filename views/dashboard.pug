@@ -18,7 +18,7 @@ block body
         form.form(method="post")
           .form-group
             label(for="email") To
-            input#email.form-control(type="email", placeholder="Client Email", name="email")
+            input#email.form-control(type="email", placeholder="Client Email", name="email", required=true)
           .form-group
             label(for="description") Description
             input#description.form-control(type="text", placeholder="Description", name="description", required=true)
