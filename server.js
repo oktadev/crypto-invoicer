@@ -32,7 +32,7 @@ app.use("/static", express.static("static"));
 
 app.use(session({
   cookie: { httpOnly: true },
-  secret: process.env.SECRET
+  secret: SECRET
 }));
 
 // Authentication
