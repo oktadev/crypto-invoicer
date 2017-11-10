@@ -45,9 +45,9 @@ let oidc = new ExpressOIDC({
   scope: 'openid profile'
 });
 
-// App routes
 app.use(oidc.router);
 
+// App routes
 app.get("/", (req, res) => {
   res.render("index");
 });
