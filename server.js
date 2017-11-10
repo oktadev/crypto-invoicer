@@ -56,7 +56,7 @@ app.get("/dashboard", oidc.ensureAuthenticated(), (req, res) => {
   res.render("dashboard", { transactions: transactions });
 });
 
-app.post("/dashboard", bodyParser.urlencoded(), (req, res) => {
+app.post("/dashboard", oidc.ensureAuthenticated(), bodyParser.urlencoded(), (req, res) => {
   account.requestMoney({
     to: req.body.email,
     amount: req.body.amount,
