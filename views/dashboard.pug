@@ -3,7 +3,11 @@ extends base.pug
 block body
   script(src="/static/js/sorttable.js")
 
-  include navbar.pug
+  ul.nav.nav-pills.justify-content-end
+    li.nav-item
+      a.nav-link.active(href="/") Home
+      li.nav-item
+        a.nav-link.active(href="/logout") Logout
 
   h1.text-center Dashboard
 
