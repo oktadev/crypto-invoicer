@@ -42,7 +42,7 @@ let oidc = new ExpressOIDC({
   client_secret: OKTA_CLIENT_SECRET,
   redirect_uri: REDIRECT_URI,
   routes: { callback: { defaultRedirect: "/dashboard" } },
-  scope: 'openid profile'
+  scope: "openid profile"
 });
 
 app.use(oidc.router);
