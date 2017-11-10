@@ -148,7 +148,7 @@ setInterval(() => {
       console.error(err);
     }
   })
-}, 1000 * 60 * 10);
+}, 1000 * 60 * 60);
 
 // Server management
 oidc.on("ready", () => {
