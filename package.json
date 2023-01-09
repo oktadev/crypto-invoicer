@@ -10,7 +10,7 @@
   "author": "Randall Degges",
   "license": "Unlicense",
   "dependencies": {
-    "@okta/oidc-middleware": "0.0.6",
+    "@okta/oidc-middleware": "5.0.0",
     "async": "^2.6.0",
     "body-parser": "^1.18.2",
     "coinbase": "^2.0.6",
